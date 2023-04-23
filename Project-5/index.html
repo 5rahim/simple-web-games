@@ -1,0 +1,64 @@
+<!--
+Zaki Bonfoh
+index.html
+December 12, 2019
+#1 Improve the other tank
+#2 Improve the AI
+#3 Make enemy artillery
+Other enhancements:
+- Difficulties
+- Random bonuses
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 5 - 2D Tanks</title>
+    <link rel="stylesheet" href="src/css/game.css">
+    <script src="src/js/simpleGame.js"></script>
+    <script src="src/js/entities.js"></script>
+    <script src="src/js/game.js"></script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="logo"><img src="src/images/logo.png" alt=""></div>
+        <div class="game">
+            <!-- Game Over -->
+            <div class="gameover-container" id="gameOverContainer">
+                <div class="gameover" id="gameOverBackground">
+                    <div>
+                        <div class="message" id="gameOverMessage">You won!</div>
+                        <button onclick="playAgain()">Play again</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Start screen -->
+            <div class="play-container" id="playContainer">
+                <div class="play">
+                    <div class="description">
+                        <img src="src/images/description.png" alt="">
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: .8rem; margin-top: 0">Choose a difficulty:</h3>
+                        <button onclick="playMode('hard')">HARD</button>
+                        <button onclick="playMode('normal')">NORMAL</button>
+                        <button onclick="playMode('easy')">EASY</button>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div>Credits: Illustrations from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
+                </div>
+            </div>
+            <!-- Game -->
+            <div class="bonus-icon" style=""></div>
+            <div class="bonus" id="bonus">No bonus</div>
+            <div class="hp" id="hp"><div class="hpBar" id="hpBar" style="width: 100%"></div></div>
+            <div class="hp" id="enemyHp"><div class="hpBar" id="enemyHpBar" style="width: 100%"></div></div>
+            <div class="bullets" id="bullets">Bullets: <span id="bulletCount">50</span></div>
+            <canvas width="800" height="800" id="scene" style="background-color: #070f2b;"></canvas>
+            
+        </div>
+    </div>
+</body>
+</html>

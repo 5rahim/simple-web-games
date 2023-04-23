@@ -1,0 +1,61 @@
+<!--
+Zaki Bonfoh
+index.html
+October 17, 2019
+This file contains the structure of the page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Change the World!</title>
+        <link rel="stylesheet" href="src/style/css/changeTheWorld.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="box">
+                <div class="box-top">
+                    <img src="src/images/logo.png" alt="Change the World Logo">
+                </div>
+                <div class="box-content">
+                    <div class="ctw-story" id="ctw-story"></div>
+                    <form id="ctw-form">
+                        <div class="form-sections">
+                            <div>
+                                <label for="txtAdjective1">Adjective</label>
+                                <input type="text" id="txtAdjective1">
+
+                                <label for="txtVerb">Verb</label>
+                                <input type="text" id="txtVerb">
+
+                                <label for="txtNoun1">Noun</label>
+                                <input type="text" id="txtNoun1">
+
+                                <label for="txtNoun2">Noun (plural)</label>
+                                <input type="text" id="txtNoun2">
+                            </div>
+                            <div>
+                                <label for="txtNoun3">Noun (plural)</label>
+                                <input type="text" id="txtNoun3">
+
+                                <label for="txtAdjective2">Adjective</label>
+                                <input type="text" id="txtAdjective2">
+
+                                <label for="txtAdjective3">Adjective</label>
+                                <input type="text" id="txtAdjective3">
+
+                                <label for="txtNoun4">Noun</label>
+                                <input type="text" id="txtNoun4">
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px;"><button type="button" class="button button-tell-story" onclick="tellStory()">Tell the story</button></div>
+                    </form>
+                    <div style="text-align: center; margin-top: 10px;"><a class="button" onclick="tellStory('reset')">Try again</a></div>
+                </div>
+            </div>
+
+        </div>
+        <script src="src/js/changeTheWorld.js"></script>
+    </body>
+</html>

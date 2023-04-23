@@ -1,0 +1,139 @@
+/*
+ * Zaki Bonfoh
+ * spaceIncident.css
+ * November 14, 2019
+ * This file contains the code for the look and style of the page
+ */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0c1535;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6rem 1.3rem;
+  border: none;
+  font-family: inherit;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-size: 17px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  outline: 0;
+}
+button:hover {
+  background-color: #e7e7e7;
+  transform: translateY(-4px);
+}
+
+.container .logo {
+  margin-top: 3.5rem;
+  width: 300px;
+  margin-bottom: 2rem;
+  transition: all 0.15s linear;
+}
+.container .logo:hover {
+  transform: translateY(-4px);
+}
+.container .logo img {
+  max-width: 100%;
+  height: auto;
+}
+.container .game {
+  position: relative;
+  margin-top: 3rem;
+}
+.container .game .gameover-container {
+  z-index: 5 !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  display: none;
+  transition: all 0.2s linear;
+}
+.container .game .gameover-container .gameover {
+  padding: 2rem 0;
+  background-color: #070f2b;
+  width: 100%;
+}
+.container .game .gameover-container .gameover .message {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.container .game .play-container {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #070f2b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container .game .play-container .play {
+  padding: 0 3rem;
+  font-size: 1.3rem;
+}
+.container .game .score {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  left: 1rem;
+}
+.container .game .score .screws {
+  background-color: white;
+  padding: 0.14rem 0.3rem;
+  border-radius: 0.2rem;
+  color: #070f2b;
+  font-weight: bolder;
+  position: relative;
+  display: inline-block;
+  transition: all 0.15s linear;
+  transform: scale(1);
+}
+.container .game .score .screws.animation {
+  transform: scale(1.5);
+}
+.container .game .oxygen {
+  width: 100%;
+  background-color: #fff;
+  height: 20px;
+  position: relative;
+}
+.container .game .oxygen .bar {
+  width: 100%;
+  background-color: #005d80;
+  height: 100%;
+}
+
+.hide {
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.copyright a {
+  color: #e7e7e7;
+}

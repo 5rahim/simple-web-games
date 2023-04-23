@@ -1,0 +1,181 @@
+/*
+ * Zaki Bonfoh
+ * game.css
+ * November 27, 2019
+ * This file contains the code for the look and style of the page
+ */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6rem 1.3rem;
+  border: none;
+  font-family: inherit;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-size: 17px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  outline: 0;
+}
+button:hover {
+  background-color: #e7e7e7;
+  transform: translateY(-4px);
+}
+
+.container .logo {
+  margin-top: 3.5rem;
+  width: 300px;
+  margin-bottom: 2rem;
+  transition: all 0.15s linear;
+}
+.container .logo:hover {
+  transform: translateY(-4px);
+}
+.container .logo img {
+  max-width: 100%;
+  height: auto;
+}
+.container .game {
+  position: relative;
+  margin-top: 3rem;
+}
+.container .game .gameover-container {
+  z-index: 5 !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  display: none;
+  transition: all 0.2s linear;
+}
+.container .game .gameover-container .gameover {
+  padding: 2rem 0;
+  background-color: #070f2bb3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .game .gameover-container .gameover .message {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.container .game .play-container {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #070f2b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container .game .play-container .play {
+  padding: 0 3rem;
+  font-size: 1.3rem;
+}
+.container .game .play-container .tuto {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.container .game .play-container .tuto img {
+  width: auto;
+  max-height: 70px;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+}
+.container .game .lives {
+  top: 2rem;
+  left: 1rem;
+  position: absolute;
+  z-index: 1;
+  width: calc(392px/3);
+  height: calc(96px/3);
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+.container .game .lives.animation {
+  transform: scale(1.2);
+}
+.container .game .missile {
+  width: 32px;
+  height: 102px;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 7rem;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+.container .game .missiles {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  color: #070f2b;
+  z-index: 1;
+}
+.container .game .center {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+}
+.container .game .score {
+  width: 100%;
+  background-color: #000;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.container .game .score .bar {
+  width: 0;
+  background-color: #1d3c81;
+  height: 100%;
+  transition: all 0.25s linear;
+}
+
+.hide {
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.copyright a {
+  color: #e7e7e7;
+}

@@ -1,0 +1,141 @@
+/*
+ * Zaki Bonfoh
+ * war.scss
+ * October 24, 2019
+ * This file contains the code for the look and style of the page
+ */
+body {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  background-color: #73b06e;
+  font-family: sans-serif;
+  color: #fff;
+  transition: all 0.15s linear;
+}
+body.war {
+  background-color: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 0.6rem 1.3rem;
+  border: none;
+  font-family: inherit;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-size: 17px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  outline: 0;
+}
+.button:hover {
+  background-color: #e7e7e7;
+  transform: translateY(-4px);
+}
+.button.button-large {
+  padding: 1.2rem 4rem;
+  font-size: 17px;
+}
+
+.container {
+  width: 800px;
+  position: relative;
+}
+.container .logo {
+  width: 300px;
+  margin: auto;
+  margin-top: 1rem;
+}
+.container .logo img {
+  max-width: 100%;
+  transition: all 0.15s linear;
+}
+.container .logo img:hover {
+  transform: translateY(-5px);
+}
+.container .play {
+  text-align: center;
+  margin: 2rem 0 0 0;
+}
+.container .game {
+  opacity: 0;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+.container .game .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+}
+.container .game .top .tie {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: war 0.5s infinite;
+  opacity: 0;
+}
+.container .game .top .tie span {
+  font-weight: bold;
+  color: #181818;
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+}
+@keyframes war {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.container .game .top #yourScore, .container .game .top #computersScore {
+  text-align: center;
+}
+.container .game .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 200px;
+}
+.container .game .cards .left, .container .game .cards .right {
+  text-align: center;
+  height: 200px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+.container .game .cards .left img, .container .game .cards .right img {
+  height: 100%;
+  position: absolute;
+}
+.container .game .buttons {
+  text-align: center;
+}
+.container .game .buttons #dealButton {
+  position: relative;
+  bottom: 120px;
+  background-color: #383838;
+  color: #fff;
+}
+
+.hide {
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.show {
+  transition: all 0.2s linear;
+  opacity: 1 !important;
+}

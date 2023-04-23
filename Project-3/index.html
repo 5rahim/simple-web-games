@@ -1,0 +1,53 @@
+<!--
+Zaki Bonfoh
+index.html
+November 14, 2019
+This file contains the structure of the page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Mission</title>
+    <link rel="stylesheet" href="src/css/spaceIncident.css">
+    <script src="src/js/simpleGame.js"></script>
+    <script src="src/js/spaceIncident.js"></script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="game">
+            <!-- Game Over -->
+            <div class="gameover-container" id="gameOverContainer">
+                <div class="gameover" id="gameOverBackground">
+                    <div class="message" id="gameOverMessage">Mission Accomplished!</div>
+                    <button onclick="playAgain()">Play again</button>
+                </div>
+            </div>
+            
+            <!-- Start screen -->
+            <div class="play-container" id="playContainer">
+                <div class="logo"><img src="src/images/logo.png" alt=""></div>
+                <div class="play">
+                    Unfortunately, your space shuttle just lost a bunch of screws. <br>You are sent on a mission to collect at least 15 of them. But be careful, your oxygen supply is limited!
+                    <div>
+                        <br>
+                        <button onclick="play()">Play</button>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div>Credits: Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
+                </div>
+            </div>
+            <!-- Game -->
+            <div class="score">Screws: <span class="screws" id="scoreValue">0</span></div>
+            <div class="oxygen">
+                <div class="bar" id="oxygenBar">
+                    <span style="padding-left: 1rem;font-size: .8rem;">Oxygen: <span id="oxygenLevel"></span></span>
+                </div>
+            </div>
+            <canvas width="800" height="500" id="scene"></canvas>
+            
+        </div>
+    </div>
+</body>
+</html>

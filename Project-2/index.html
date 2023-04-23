@@ -1,0 +1,54 @@
+<!--
+Zaki Bonfoh
+index.html
+October 24, 2019
+This file contains the structure of the page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zaki's War Card Game</title>
+        <link rel="stylesheet" href="src/style/css/war.css">
+    </head>
+    <body id="body">
+
+        <div class="container">
+
+            <div class="logo">
+                <img src="src/images/logo.png" alt="">
+            </div>
+
+            <div class="play" id="play">
+                <p style="font-size: 20px;">Rules: Each turn is worth one point. The first to 20 points wins!</p>
+                <button class="button button-large" onclick="init()">Play</button>
+            </div>
+
+            <div class="game" id="game">
+                <div class="top">
+                    <div class="tie" id="tieSignal">
+                        <span id="tieSignalText">WAR!</span>
+                    </div>
+                    <div id="yourScore">Your score: 0</div>
+                    <div id="computersScore">Computer's score: 0</div>
+                </div>
+                <div class="cards">
+                    <div class="left" id="leftCardContainer">
+                        <img src="src/images/card_0.png" alt="">
+                    </div>
+                    <div class="right" id="rightCardContainer">
+                        <img src="src/images/card_0.png" alt="">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="button" id="dealButton" onclick="deal()">Deal</button>
+                    <br>
+                    <button class="button" onclick="newGame()">New game</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="src/js/war.js"></script>
+    </body>
+</html>

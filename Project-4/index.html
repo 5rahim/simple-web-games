@@ -1,0 +1,62 @@
+<!--
+Zaki Bonfoh
+index.html
+November 27, 2019
+This file contains the structure of the page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asteroid</title>
+    <link rel="stylesheet" href="src/css/game.css">
+    <script src="src/js/simpleGame.js"></script>
+    <script src="src/js/entities.js"></script>
+    <script src="src/js/game.js"></script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="game">
+            <!-- Game Over -->
+            <div class="gameover-container" id="gameOverContainer">
+                <div class="gameover" id="gameOverBackground">
+                    <div>
+                        <div class="message" id="gameOverMessage">You won!</div>
+                        <button onclick="playAgain()">Play again</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Start screen -->
+            <div class="play-container" id="playContainer">
+                <div class="play">
+                    <div>
+                        <div class="tuto"><img src="src/images/t1.png" alt="">Watch out for debris of asteroids and asteroids that bounce back</div>
+                        <div class="tuto"><img src="src/images/t2.png" alt="">After your ship respawns, you will have approximately 3 seconds before the game starts dectecting collisions</div>
+                        <div class="tuto"><img src="src/images/t4.png" alt="">Each time your ship collides with an asteroid or some debris you will loose one life, you have 3 lives (4 tries)</div>
+                        <div class="tuto"><img src="src/images/t5.png" alt="">The goal is to fill up the score bar by destroying asteroids.<br>
+                            The score will slowly decrease as time passes, if it goes back to 0, you lose.</div>
+                        <div class="tuto"><img src="src/images/t6.png" alt="">You can fire up to 50 missiles at the same time by pressing the space bar.<br> After firing all 50 missiles, you'll have to wait 3 seconds before you get another 50.</div>
+                        <br>
+                        <button onclick="play()">Play</button>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div>Credits: Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>
+                </div>
+            </div>
+            <!-- Game -->
+            <div class="score">
+                <div class="bar" id="scoreBar">
+                    <span style="padding-left: 1rem;font-size: .8rem;">Score: <span id="time"></span></span>
+                </div>
+            </div>
+            <div class="lives" id="lives" style="background-image: url('src/images/lives3.png')"></div>
+            <div class="missile" style="background-image: url('src/images/missile.png')"></div>
+            <div class="missiles" id="missiles"><span id="missilesCount">50</span></div>
+            <canvas width="800" height="800" id="scene" style="background-color: #070f2b;"></canvas>
+            
+        </div>
+    </div>
+</body>
+</html>
